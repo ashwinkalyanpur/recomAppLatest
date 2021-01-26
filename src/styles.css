@@ -25,5 +25,11 @@
 .btn-register:hover, .btn-register:focus{
     background-color: #001b3f;
     color:rgba(255,255,255,1) !important;
-
+}
+#dataInfo{
+    width: 100%;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }

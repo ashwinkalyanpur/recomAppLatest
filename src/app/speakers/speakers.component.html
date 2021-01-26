@@ -1,10 +1,53 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-sm-3" *ngFor="let testData of speakersList">
             <h4>{{ testData.partner_name}}</h4>
             <a href={{this.a+testData.link}} target="_blank"> 
                 <img src="{{testData.img_url}}" class="img-fluid" />
             </a>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div id="dataInfo">
+            <div id="myCarousel" class="carousel" data-ride="carousel" test>
+                <div class="carousel-inner row w-100 mx-auto" #cara="Carousel" [animationDuration]="300">
+                    <div class="col-sm-3 mb-3" *ngFor="let testData of speakersList">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5 class="card-title">{{ testData.name}}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <img src="{{testData.img_url}}" class="img-fluid" />
+                                    </div>
+                                    <div class="h5">{{ testData.designation }}</div>
+                                    <p>
+                                        {{ testData.description }}
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <a href={{this.a+testData.FB_Link}} target="_blank">
+                                                <fa-icon [icon]="faTwitter"></fa-icon>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a href={{this.a+testData.Twitter_Link}} target="_blank">
+                                                <fa-icon [icon]="faFB"></fa-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -46,11 +46,11 @@ export class PartnershipRegComponent implements OnInit {
         Validators.required,
         Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")
       ]),
-      Password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(20)
-      ]),
+      // Password: new FormControl('', [
+      //   Validators.required,
+      //   Validators.minLength(8),
+      //   Validators.maxLength(20)
+      // ]),
       Name: new FormControl('', [
         Validators.required,
         Validators.pattern("^[A-Za-z ]{4,15}$")
@@ -67,24 +67,24 @@ export class PartnershipRegComponent implements OnInit {
         Validators.required,
         Validators.pattern("^[0-9]{10,15}$")
       ]),
-      Address1: new FormControl('', [
-        Validators.required
-      ]),
+      // Address1: new FormControl('', [
+      //   Validators.required
+      // ]),
       City: new FormControl('', [
         Validators.required,
         Validators.pattern("^[A-Za-z ]{3,15}$")
       ]),
-      GST: new FormControl('', [
-        Validators.required,
-        Validators.pattern("^[A-Za-z0-9 ]{3,15}$")
-      ]),
-      Amount: new FormControl('', [
-        Validators.required,
-        Validators.pattern("^[0-9,.]{3,15}$")
-      ]),
-      Address2: new FormControl('', [
-        Validators.required
-      ]),
+      // GST: new FormControl('', [
+      //   Validators.required,
+      //   Validators.pattern("^[A-Za-z0-9 ]{3,15}$")
+      // ]),
+      // Amount: new FormControl('', [
+      //   Validators.required,
+      //   Validators.pattern("^[0-9,.]{3,15}$")
+      // ]),
+      // Address2: new FormControl('', [
+      //   Validators.required
+      // ]),
       State: new FormControl('', [
         Validators.required,
         Validators.pattern("^[A-Za-z ]{3,15}$")
@@ -94,7 +94,7 @@ export class PartnershipRegComponent implements OnInit {
   onSubmit() {
     this.restApi.getPartnership(this.partnership).subscribe((data: {}) => {
     })
-    console.log(this.formGroup);
+    
   }
  
   onReset() {

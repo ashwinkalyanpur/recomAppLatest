@@ -25,6 +25,8 @@ import { CUSTOM_ERROR_MESSAGES, NgBootstrapFormValidationModule } from 'ng-boots
 import {CUSTOM_ERRORS} from "./custom-errors";
 import { SpeakersComponent } from './speakers/speakers.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EventRegComponent } from './event-reg/event-reg.component';
 
 
 
@@ -45,7 +47,8 @@ import { TestimonalsComponent } from './testimonals/testimonals.component';
     ConferenceRegComponent,
     VisitorRegComponent,
     SpeakersComponent,
-    TestimonalsComponent
+    TestimonalsComponent,
+    EventRegComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { TestimonalsComponent } from './testimonals/testimonals.component';
     FormsModule,
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
+    FontAwesomeModule,
   ],
   providers: [HttpClientModule,{  
     provide: CUSTOM_ERROR_MESSAGES,

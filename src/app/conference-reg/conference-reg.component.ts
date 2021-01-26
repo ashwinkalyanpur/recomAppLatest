@@ -18,7 +18,11 @@ export class ConferenceRegComponent implements OnInit {
     phone: '',
     mail: '',
     GST: '',
-    amount: ''
+    amount: '',
+    address1:'',
+    address2:'',
+    city:'',
+    state:''
   }
 
   customErrorMessages: ErrorMessage[] = [
@@ -62,6 +66,22 @@ export class ConferenceRegComponent implements OnInit {
       Amount: new FormControl('', [
         Validators.required,
         Validators.pattern("^[0-9,.]{3,15}$")
+      ]),
+      address1: new FormControl('', [
+        Validators.required,
+        Validators.pattern("^[A-Za-z ]{3,15}$")
+      ]),
+      address2: new FormControl('', [
+        Validators.required,
+        Validators.pattern("^[A-Za-z ]{3,15}$")
+      ]),
+      city: new FormControl('', [
+        Validators.required,
+        Validators.pattern("^[A-Za-z]{3,15}$")
+      ]),
+      state: new FormControl('', [
+        Validators.required,
+        Validators.pattern("^[A-Za-z]{3,15}$")
       ])
     });
   }

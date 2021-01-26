@@ -17,14 +17,7 @@ export class SupportedComponent implements OnInit {
   ngOnInit(): void {
     this.getPartnersEvents();
   }
-  // getPartnersEvents() {
-  //   this.RestAPI.getPartners(this.SupportedId).subscribe((data: any) => {
-
-  //     console.log(data)
-  //     this.supporteList = data.eventlist.supported
-      
-  //   })
-  // }
+  
   getPartnersEvents() {
  
     this.RestAPI.getPartners(this.SupportedId).subscribe((data: any) => {

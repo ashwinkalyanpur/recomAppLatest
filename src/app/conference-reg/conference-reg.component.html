@@ -1,36 +1,55 @@
 <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
     <div class="row">
-            <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
-                <label class="control-label">Name</label>
-                <input type="text" [(ngModel)]="conference.name" class="form-control" formControlName="Name">
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="control-label">Designation</label>
-                <input type="text" [(ngModel)]="conference.designation" class="form-control" formControlName="Designation">
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="control-label">Phone</label>
-                <input type="tel" [(ngModel)]="conference.phone" class="form-control" formControlName="Phone">
-            </div>
-            <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
-                <label class="control-label">Email</label>
-                <input type="email" [(ngModel)]="conference.mail" class="form-control" formControlName="Email">
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="control-label">GST</label>
-                <input type="text" [(ngModel)]="conference.GST" class="form-control" formControlName="GST">
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="control-label">Amount</label>
-                <input type="text" [(ngModel)]="conference.amount" class="form-control" formControlName="Amount">
-            </div>
-            <div class="form-group col-sm-6">
-                <label class="control-label">Company</label>
-                <input type="text" [(ngModel)]="conference.company" class="form-control" formControlName="Company">
-            </div>
+        <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
+            <label class="control-label">Name</label>
+            <input type="text" [(ngModel)]="conference.name" class="form-control" formControlName="Name">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Designation</label>
+            <input type="text" [(ngModel)]="conference.designation" class="form-control" formControlName="Designation">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Phone</label>
+            <input type="tel" [(ngModel)]="conference.phone" class="form-control" formControlName="Phone">
+        </div>
+        <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
+            <label class="control-label">Email</label>
+            <input type="email" [(ngModel)]="conference.mail" class="form-control" formControlName="Email">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">GST/PAN</label>
+            <input type="text" [(ngModel)]="conference.GST" class="form-control" formControlName="GST">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Amount</label>
+            <input type="text" [(ngModel)]="conference.amount" class="form-control" formControlName="Amount">
+        </div>
+        <h5 class="col-sm-12">
+            Billing Address
+        </h5>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Company</label>
+            <input type="text" [(ngModel)]="conference.company" class="form-control" formControlName="Company">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Address 1</label>
+            <input type="text" [(ngModel)]="conference.address1" class="form-control" formControlName="address1">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">Address 2</label>
+            <input type="text" [(ngModel)]="conference.address2" class="form-control" formControlName="address2">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">City</label>
+            <input type="text" [(ngModel)]="conference.city" class="form-control" formControlName="city">
+        </div>
+        <div class="form-group col-sm-6">
+            <label class="control-label">State</label>
+            <input type="text" [(ngModel)]="conference.state" class="form-control" formControlName="state">
+        </div>
         <div class="col-md-12">
             <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
-            <button class="btn btn-primary pull-right" (click)="onSubmit()" type="submit">Submit</button>
+            <button class="btn btn-primary pull-right" (click)="onSubmit()" type="submit" [disabled]="!formGroup.valid">Submit</button>
         </div>
     </div>
 </form>

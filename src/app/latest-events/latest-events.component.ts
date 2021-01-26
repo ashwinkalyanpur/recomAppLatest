@@ -13,7 +13,9 @@ export class LatestEventsComponent implements OnInit {
   // returnURL: string;
 
   constructor(
-    public RestAPI: EventService, public router: Router) { }
+    public RestAPI: EventService, 
+    public router: Router
+    ) { }
     
   ngOnInit(): void {
     this.getUpcomingEvents();
