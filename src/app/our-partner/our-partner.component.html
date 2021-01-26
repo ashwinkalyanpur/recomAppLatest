@@ -1,11 +1,12 @@
 <!-- {{ partnersList | json }} -->
 <div class="col-sm-12" *ngFor="let testData of partnersList">
     <div>{{ testData.partner_name}}</div>
-    <div>{{ testData.img_url}}</div>
-
+    <a href="{{testData.link}}" target="_blank">
+        <img src="{{testData.img_url}}" />
+    </a>
 </div>
 
-    <span>
+<span>
     {{ partnersList | json }}
 
-    </span>
+</span>

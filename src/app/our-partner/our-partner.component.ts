@@ -22,11 +22,7 @@ export class OurPartnerComponent implements OnInit {
   }
   getPartnersEvents() {
     this.RestAPI.getPartners(this.eventId).subscribe((data: any) => {
-      // if(data.event_speakers && data.event_speakers[0] && data.event_speakers[0].upcoming){
-      //   this.partnersList = data.event_speakers[0].upcoming;
-      this.partnersList = data;
-        console.log("sample click 121", this.partnersList)
-      // }
+      this.partnersList = data.eventlist.partners
     })
   }
 }
