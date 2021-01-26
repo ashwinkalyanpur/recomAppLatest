@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row mb-5">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/banners/Battery_Banner.jpg" class="img-fluid" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Global Battery Recycling Conference</h3>
+          <p>March 03 2021 Bengaluru</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/images/banners/Textile_Banner.jpg" class="img-fluid" />
+        </div>
+        <div class="carousel-caption">
+          <h3>Sustainable Clothing & Textile</h3>
+          <p>April 05 2021 Coimbatore, April 07 2021 Surat, April 09 2021 Jaipur </p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="container mb-3">
+    <div class="row">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Upcoming Events</a>
+          <ng-template ngbNavContent>
+            <app-latest-events></app-latest-events>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Past Events</a>
+          <ng-template ngbNavContent>
+            <app-past-events></app-past-events>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+  </div>
+</div>

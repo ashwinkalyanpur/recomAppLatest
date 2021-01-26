@@ -1,0 +1,32 @@
+<form [formGroup]="formGroup" (validSubmit)="onSubmit()">
+    <div class="row">
+            <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
+                <label class="control-label">Name</label>
+                <input type="text" [(ngModel)]="visitor.name" class="form-control" formControlName="Name">
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label">Designation</label>
+                <input type="text" [(ngModel)]="visitor.designation" class="form-control" formControlName="Designation">
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label">Phone</label>
+                <input type="tel" [(ngModel)]="visitor.phone" class="form-control" formControlName="Phone">
+            </div>
+            <div class="form-group col-sm-6" [customErrorMessages]="customErrorMessages">
+                <label class="control-label">Email</label>
+                <input type="email" [(ngModel)]="visitor.mail" class="form-control" formControlName="Email">
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label">Company</label>
+                <input type="text" [(ngModel)]="visitor.company" class="form-control" formControlName="Company">
+            </div>
+            <div class="form-group col-sm-6">
+                <label class="control-label">City</label>
+                <input type="text" [(ngModel)]="visitor.city" class="form-control" formControlName="City">
+            </div>
+        <div class="col-md-12">
+            <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
+            <button class="btn btn-primary pull-right" (click)="onSubmit()" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
