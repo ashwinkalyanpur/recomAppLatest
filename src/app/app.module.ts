@@ -23,6 +23,8 @@ import { VisitorRegComponent } from './visitor-reg/visitor-reg.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CUSTOM_ERROR_MESSAGES, NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 import {CUSTOM_ERRORS} from "./custom-errors";
+import { SpeakersComponent } from './speakers/speakers.component';
+import { TestimonalsComponent } from './testimonals/testimonals.component';
 
 
 
@@ -41,7 +43,9 @@ import {CUSTOM_ERRORS} from "./custom-errors";
     PartnershipRegComponent,
     ExhibitorRegComponent,
     ConferenceRegComponent,
-    VisitorRegComponent
+    VisitorRegComponent,
+    SpeakersComponent,
+    TestimonalsComponent
   ],
   imports: [
     BrowserModule,

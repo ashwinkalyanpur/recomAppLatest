@@ -59,6 +59,7 @@ export class EventService {
   }
 
   getPartners(id:any): Observable<PartnerShip> {
+    
     const requestParm = {
        "event_id":  id
     }

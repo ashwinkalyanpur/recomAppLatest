@@ -1,1 +1,10 @@
-<p>association works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let testData of AssociationList  ">
+            <h4>{{ testData.partner_name}}</h4>
+            <a href={{this.a+testData.link}} target="_blank"> 
+                <img src="{{testData.img_url}}" class="img-fluid" />
+            </a>
+        </div>
+    </div>
+</div>

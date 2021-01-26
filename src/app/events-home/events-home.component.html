@@ -76,34 +76,41 @@
 
 <div class="container-fluid">
     <div class="row">
-        <img src="../../assets/images/banners/Textile_Banner.jpg" class="img-fluid" />
-        <img src="../../assets/images/banners/Battery_Banner.jpg" class="img-fluid" />
+        <!-- <img src="../../assets/images/banners/Textile_Banner.jpg" class="img-fluid" /> -->
+        <img [src]="event_urls" class="img-fluid" />
     </div>
 </div>
 <div class="container">
+  <div class="row">
+    <h1>
+        Supported By  
+    </h1>
+    <app-supported [SupportedId]="SupportedId"></app-supported>
+</div>
     <div class="row">
-      <h1>{{ eventName }}</h1>
-      <h1>{{ eventDescription }}</h1>
+   
         <h1>our Partners for Textile</h1>
         <app-our-partner [eventId]="eventId" ></app-our-partner>
     </div>
     <div class="row">
-        <h1>
-            Supported By
-        </h1>
-    </div>
+      <h1>Speakers</h1>
+      <app-speakers [speakersId]="speakersId"></app-speakers>
+  </div>
+  <div class="row">
+    <h1>
+        Association Partners</h1>
+        <app-association [AssociationId]="AssociationId"></app-association>
+    
+</div>
+    
     <div class="row">
         <h1>Media Partners</h1>
+        <app-media [MediaId]="MediaId"></app-media>
     </div>
-    <div class="row">
-        <h1>
-            Association Partners
-        </h1>
-    </div>
-    <div class="row">
-        <h1>Speakers</h1>
-    </div>
+    
+   
     <div class="row">
         <h1>Testimonals</h1>
+        <app-testimonals [TestimonalsId]="TestimonalsId"></app-testimonals>
     </div>
 </div>

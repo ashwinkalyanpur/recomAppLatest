@@ -11,7 +11,7 @@ import { EventService } from 'src/app/API/events.service';
 export class OurPartnerComponent implements OnInit {
   @Input() eventId= '';
   partnersList: any;
-
+  a="https://";
   constructor(public RestAPI: EventService) {
     
   }
@@ -22,7 +22,9 @@ export class OurPartnerComponent implements OnInit {
   }
   getPartnersEvents() {
     this.RestAPI.getPartners(this.eventId).subscribe((data: any) => {
-      this.partnersList = data.eventlist.partners
+      this.partnersList = data.eventlist.partners 
+      console.log(this.partnersList[0].link)
+      
     })
   }
 }

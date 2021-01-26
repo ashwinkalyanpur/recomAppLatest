@@ -26,7 +26,14 @@ export class LatestEventsComponent implements OnInit {
     })
   }
   registerAnEvent(event: any){
-    console.log("sample event data", event);
+    console.log("sample event data", event.fileUpload);
     this.router.navigateByUrl('/EventsHomeComponent', { state: { id:event.id, name:event.name, description:event.description } });
+    localStorage.setItem('eventId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description,fileUpload:event.fileUpload }}));
+    localStorage.setItem('SupportedId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
+    localStorage.setItem('speakersId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
+    localStorage.setItem('AssociationId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
+    localStorage.setItem('MediaId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
+    localStorage.setItem('TestimonalsId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
+    
   }
 }
