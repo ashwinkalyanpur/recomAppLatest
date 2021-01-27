@@ -19,4 +19,9 @@
   margin: 0 auto;
   display: block;
 }
+.designation{
+  padding-top: 15px;
+  min-height: 70px;
+  font-weight: bold;
+}
 

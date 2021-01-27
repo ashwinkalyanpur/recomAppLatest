@@ -29,6 +29,7 @@ export class EventsHomeComponent implements OnInit {
   AssociationId='';
   MediaId='';
   TestimonalsId='';
+  eventEndDate= '';
 
   constructor(
     @Inject(DOCUMENT) private document: Document, 
@@ -65,8 +66,12 @@ export class EventsHomeComponent implements OnInit {
       var event_lists=JSON.parse(retrievedObject);
       this.eventId = event_lists.state.id;
       this.eventName = event_lists.state.name;
+      this.eventEndDate = event_lists.state.startDate;
       this.eventDescription =event_lists.state.description;
       this.event_urls =event_lists.state.fileUpload;
+      console.log('event',this.eventName)
+      console.log('event date', event_lists)
+
      
       
       //Supported by
@@ -95,7 +100,7 @@ export class EventsHomeComponent implements OnInit {
       var retrievedObjectMediaId = localStorage.getItem('TestimonalsId');
       var event_lists=JSON.parse(retrievedObjectMediaId);
       this.TestimonalsId=event_lists.state.id
-      console.log(this.TestimonalsId)
+      
     })
     this.getUpcomingEvents();
   }
@@ -103,7 +108,8 @@ export class EventsHomeComponent implements OnInit {
     this.RestAPI.getEventList().subscribe((data: any) => {
       if(data.eventlist && data.eventlist[0] && data.eventlist[0].upcoming){
         this.upcomingEvents = data.eventlist[0].upcoming;
-        console.log('check for data', data)
+        console.log(this.upcomingEvents)
+        
       }
     })
   }

@@ -24,11 +24,12 @@ export class LatestEventsComponent implements OnInit {
     this.RestAPI.getEventList().subscribe((data: any) => {
       if(data.eventlist && data.eventlist[0] && data.eventlist[0].upcoming){
         this.upcomingEvents = data.eventlist[0].upcoming;
+        console.log("added data fetch", data);
       }
     })
   }
   registerAnEvent(event: any){
-    console.log("sample event data", event.fileUpload);
+    console.log("sample event data", event);
     this.router.navigateByUrl('/EventsHomeComponent', { state: { id:event.id, name:event.name, description:event.description } });
     localStorage.setItem('eventId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description,fileUpload:event.fileUpload }}));
     localStorage.setItem('SupportedId', JSON.stringify({ state: { id:event.id, name:event.name, description:event.description }}));
